@@ -6,7 +6,7 @@ void main() {
   runApp(
     GetMaterialApp(
       title : "Products",
-      initialRoute: AppRoutes.products,
+      initialRoute: AppRoutes.splash,
       getPages: AppRoutes.routes ,
       debugShowCheckedModeBanner: false,
     )

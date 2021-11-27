@@ -11,30 +11,30 @@ class UserModel {
 
   factory UserModel.toObject(Map<String, dynamic> json) =>
       UserModel(
-          user: User.toObject(json['user']),
-          token: json['token'],
+          user: User.toObject(json['item']),
+          token: json['sessionToken'],
       );
 
   Map<String, dynamic> toJson() => {
-    "user" : user.toJson(),
-    "token" : token,
+    "item" : user.toJson(),
+    "sessionToken" : token,
   };
 }
 
 class User {
-  int id;
+  String id;
   String name;
-  String email;
+  String phone;
 
-  User({required this.id, required this.name, required this.email});
+  User({required this.id, required this.name, required this.phone});
 
   factory User.toObject(Map<String, dynamic> json) =>
-      User(id: json['id'], name: json['name'], email: json['email']);
+      User(id: json['id'], name: json['name'], phone: json['phone']);
 
   Map<String, dynamic> toJson() => {
     "id" : id,
     "name" : name,
-    "email" : email,
+    "email" : phone,
   };
 
 }
